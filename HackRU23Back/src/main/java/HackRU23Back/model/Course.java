@@ -18,7 +18,41 @@ public class Course {
 		grade = "";
 		credits = 0;
 	}
+
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getNumber() {
+		return this.number;
+	}
+
+	public void setNumber(String number) {
+		this.number = number;
+	}
+
+	public String getGrade() {
+		return this.grade;
+	}
+
+	public void setGrade(String grade) {
+		this.grade = grade;
+	}
+
+	public int getCredits() {
+		return this.credits;
+	}
+
+	public void setCredits(int credits) {
+		this.credits = credits;
+	}
+
 	
-	public
+	
 }
 

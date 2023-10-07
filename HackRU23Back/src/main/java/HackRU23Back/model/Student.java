@@ -7,7 +7,7 @@ public class Student {
     private String classYear; // i.e. "Freshman, Sophomore, etc."
     private int gradYear; // i.e. "2027, 2026, etc."
     private ArrayList<Course> courseList;
-	private double gpa
+	private double gpa;
 	
     
 	public Student(int nC, String n, String cY, int gY, ArrayList<Course> cL) {
@@ -29,43 +29,55 @@ public class Student {
 	
 	// put default constructor (figure it out), inherent calls to super() in constructor
 	
+
 	public int getNumClasses() {
-		return numClasses;
+		return this.numClasses;
 	}
+
+	public void setNumClasses(int numClasses) {
+		this.numClasses = numClasses;
+	}
+
 	public String getName() {
-		return name;
+		return this.name;
 	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
 	public String getClassYear() {
-		return classYear;
+		return this.classYear;
 	}
+
+	public void setClassYear(String classYear) {
+		this.classYear = classYear;
+	}
+
 	public int getGradYear() {
-		return gradYear;
+		return this.gradYear;
 	}
+
+	public void setGradYear(int gradYear) {
+		this.gradYear = gradYear;
+	}
+
 	public ArrayList<Course> getCourseList() {
-		return courseList;
+		return this.courseList;
 	}
+
+	public void setCourseList(ArrayList<Course> courseList) {
+		this.courseList = courseList;
+	}
+
 	public double getGPA() {
-		return gpa;
+		return this.gpa;
 	}
-	public void setNumClasses(int nC) {
-		numClasses = nC;
+
+	public void setGPA(double gpa) {
+		this.gpa = gpa;
 	}
-	public void setName(String n) {
-		name = n;
-	}
-	public void setClassYear(String cY) {
-		classYear = cY;
-	}
-	public void setGradYear(int gY) {
-		gradYear = gY;
-	}
-	public void setCourseList(ArrayList<Course> cL) {
-		courseList = cL;
-	}
-	public void setGPA(double g) {
-		gpa = g;
-	}
-	
+
 	
 	public double calcGPA(ArrayList<Course> courses) {
 		for (Course c : courses) {
