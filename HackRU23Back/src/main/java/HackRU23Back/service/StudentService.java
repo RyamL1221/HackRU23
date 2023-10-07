@@ -36,7 +36,7 @@ public class StudentService {
     }
 
     public Student findStudentById(Long id) {
-        return studentRepo.findStudentbyId(id)
+        return studentRepo.findStudentById(id)
             .orElseThrow(() -> new StudentNotFoundException("Student with id " + id + " was not fonud."));
     }
 

@@ -18,7 +18,5 @@ public class Course {
 		grade = "";
 		credits = 0;
 	}
-	
-	public
 }
 
