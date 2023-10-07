@@ -1,0 +1,1 @@
+{"ast":null,"code":"export * from './gpa.component';","map":{"version":3,"mappings":"AAAA,cAAc,iBAAiB","names":[],"sourceRoot":"","sources":["C:\\Users\\Jhell\\OneDrive\\Documents\\HackRU23\\HackRU23\\hackru2023front\\src\\app\\gpa\\index.ts"],"sourcesContent":["export * from './gpa.component';"]},"metadata":{},"sourceType":"module","externalDependencies":[]}
