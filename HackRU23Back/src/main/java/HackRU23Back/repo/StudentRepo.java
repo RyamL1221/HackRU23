@@ -9,10 +9,8 @@ import HackRU23Back.model.Student;
 
 public interface StudentRepo extends MongoRepository<Student, Long> {
     
-    @Query("{id:'?0'}")
     void deleteStudentById(Long id);
 
-    @Query("{id:'?0'}")
     Student findStudentbyId(Long id);
 
     public long count();
