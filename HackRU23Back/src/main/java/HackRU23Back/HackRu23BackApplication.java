@@ -10,7 +10,7 @@ import HackRU23Back.repo.StudentRepo;
 
 @SpringBootApplication
 @EnableMongoRepositories
-public class HackRu23BackApplication implements CommandLineRunner{
+public class HackRu23BackApplication{
 
 	@Autowired
 	StudentRepo studentRepo;
