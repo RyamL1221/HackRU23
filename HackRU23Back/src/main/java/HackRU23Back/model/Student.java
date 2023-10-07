@@ -80,8 +80,9 @@ public class Student {
 
 	
 	public double calcGPA(ArrayList<Course> courses) {
+		int total = 0;
 		for (Course c : courses) {
-			
+			total += c
 		}
 	}
     

@@ -5,18 +5,22 @@ public class Course {
 	private String number;
 	private String grade;
 	private int credits;
+	private double value;
+	
 	
 	public Course(String n, String num, String g, int c) {
 		name = n;
 		number = num;
 		grade = g;
 		credits = c;
+		value = 
 	}
 	public Course() {
 		name = "";
 		number = "";
 		grade = "";
 		credits = 0;
+		value = 0;
 	}
 
 
