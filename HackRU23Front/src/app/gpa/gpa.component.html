@@ -198,3 +198,42 @@
         </ul>
     </footer>
 </div>
+
+<!-- Add Student Modal -->
+<!--
+<div class="modal fade" id="addStudentModal" tabindex="-1" role="dialog" aria-labelledby="addStudentModal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addStudentModal">Add Student</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form #addForm="ngForm" (ngSubmit)="onAddStudent(addForm)">
+                <div class="modal-body">     
+                    <div>
+                        <label for="name">Name</label>
+                        <input type="text" ngModel name="name" class="form-control" id="name" placeholder="Name" required>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="classYear">Class Year</label>
+                        <input type="text" ngModel name="classYear" class="form-control" id="classYear" placeholder="Grade Level" required>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="gradYear">Graduation Year</label>
+                        <input type="gradYear" ngModel name="gradYear" class="form-control" id="gradYear" placeholder="Points" required>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" id="add-student-form" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button [disabled]="addForm.invalid" type="submit" class="btn btn-primary">Save</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+-->

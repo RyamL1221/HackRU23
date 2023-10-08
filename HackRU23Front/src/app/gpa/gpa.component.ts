@@ -11,6 +11,7 @@ import { Course } from './course';
   templateUrl: './gpa.component.html',
   styleUrls: ['./gpa.component.css']
 })
+
 export class GpaComponent {
 
   public students: Student[] = [];
