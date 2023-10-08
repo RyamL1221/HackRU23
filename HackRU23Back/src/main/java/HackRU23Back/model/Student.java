@@ -23,18 +23,28 @@ public class Student implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private String id;
-	private int numClasses;
     private String name;
     private String classYear; // i.e. "Freshman, Sophomore, etc."
     private int gradYear; // i.e. "2027, 2026, etc."
-    private String courseList;
+    private ArrayList<Course> courseList;
 	private double gpa;
 
-	public Student(int numClasses, String name, String classYear, int gradYear, String courseList) {
-		this.numClasses = numClasses;
+	public Student(String name, String classYear, int gradYear, ArrayList<Course> courseList) {
 		this.name = name;
 		this.classYear = classYear;
 		this.gradYear = gradYear;
 		this.courseList = courseList;
+		this.gpa = calcGPA();
+	}
+
+	public double calcGPA() {
+		double sum = 0.0;
+		int creditSum = 0;
+		for (Course c : courseList) {
+			sum += c.getValue() * c.getCredits();
+			creditSum += c.getCredits();
+		}
+		sum /= creditSum;
+		return sum;
 	}
 }
