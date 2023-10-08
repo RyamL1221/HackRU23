@@ -21,40 +21,32 @@ public class Student implements Serializable{
     private String name;
 	@Column(name="classYear")
     private String classYear; // i.e. "Freshman, Sophomore, etc."
-	@Column(name="gradYear")
-    private String gradYear; // i.e. "2027, 2026, etc."
-	@Column(name="courseList")
-    private String courseList;
-	@Column(name="gpa")
-	private String gpa;
-	@Column(nullable = false, updatable = false)
-	private String code;
-
-	public Student(String numClasses, String name, String classYear, String gradYear, String courseList, String gpa) {
-		this.numClasses = numClasses;
-		this.name = name;
-		this.classYear = classYear;
-		this.gradYear = gradYear;
-		this.courseList = courseList;
-		this.gpa = gpa;
-		
-	}	
-
-	public Student() {}
-
-	public Long getId() {
-		return this.id;
+    private int gradYear; // i.e. "2027, 2026, etc."
+    private ArrayList<Course> courseList;
+	private double gpa;
+	
+    
+	public Student(int nC, String n, String cY, int gY, ArrayList<Course> cL) {
+		numClasses = nC;
+		name = n;
+		classYear = cY;
+		gradYear = gY;
+		courseList = cL;
+		gpa = this.calcGPA();
 	}
 
 	public void setId(Long id) {
 		this.id = id;
 	}
+	
+	// put default constructor (figure it out), inherent calls to super() in constructor
+	
 
-	public String getNumClasses() {
+	public int getNumClasses() {
 		return this.numClasses;
 	}
 
-	public void setNumClasses(String numClasses) {
+	public void setNumClasses(int numClasses) {
 		this.numClasses = numClasses;
 	}
 
@@ -73,40 +65,44 @@ public class Student implements Serializable{
 	public void setClassYear(String classYear) {
 		this.classYear = classYear;
 	}
-
-	public String getGradYear() {
-		return this.gradYear;
+	public int getGradYear() {
+		return gradYear;
 	}
 
-	public void setGradYear(String gradYear) {
-		this.gradYear = gradYear;
-	}
-
-	public String getCourseList() {
+	public ArrayList<Course> getCourseList() {
 		return this.courseList;
 	}
 
-	public void setCourseList(String courseList) {
+	public void setCourseList(ArrayList<Course> courseList) {
 		this.courseList = courseList;
 	}
-
-	public String getGpa() {
-		return this.gpa;
+	public double getGPA() {
+		return gpa;
 	}
-
-	public void setGpa(String gpa) {
-		this.gpa = gpa;
+	public void setNumClasses(int nC) {
+		numClasses = nC;
 	}
-
-	public String getCode() {
-		return this.code;
+	public void setName(String n) {
+		name = n;
 	}
-
-	public void setCode(String code) {
-		this.code = code;
+	public void setClassYear(String cY) {
+		classYear = cY;
+	}
+	public void setGradYear(int gY) {
+		gradYear = gY;
+	}
+	public void setCourseList(ArrayList<Course> cL) {
+		courseList = cL;
+	}
+	public void setGPA(double g) {
+		gpa = g;
 	}
 	
+	
+	public double calcGPA(ArrayList<Course> courses) {
+		for (Course c : courses) {
+			
+		}
+	}
     
-	
-
 }
