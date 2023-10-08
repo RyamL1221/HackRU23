@@ -23,11 +23,12 @@ public class Student implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	private String code;
 	private int numClasses;
     private String name;
     private String classYear; // i.e. "Freshman, Sophomore, etc."
     private int gradYear; // i.e. "2027, 2026, etc."
     private String courseList;
 	private double gpa;
-	private String code;
+	
 }
