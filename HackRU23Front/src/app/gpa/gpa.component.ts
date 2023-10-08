@@ -15,6 +15,7 @@ import { Course } from './course';
 export class GpaComponent {
 
   public students: Student[] = [];
+  public classNum = 8;
 
   constructor(private studentService: StudentService) {}
 
@@ -36,6 +37,24 @@ export class GpaComponent {
   public counter(i: number) {
     return new Array(i);
 }
+
+  onSelected(value: string): void {
+    console.log("it works");
+    this.classNum = Number('value');
+  }
+
+  onAddStudent(addForm: NgForm): void {
+    document.getElementById('add-student-form')?.click();
+    this.studentService.addStudent(addForm.value).subscribe(
+      (response: Student) => {
+        this.getStudents();
+        addForm.reset;
+      },
+      (error: HttpErrorResponse) => {
+        alert(error.message);
+      }
+    )
+  }
   public num1 = 0;
   public update(): void{
     const num = document.getElementById("membership") as HTMLSelectElement
@@ -51,6 +70,7 @@ export class GpaComponent {
     for (let i = 0; i < courses.length; i++) {
       courses[i].style.display = "block";
     }
+
     for (let i = courses.length-1; i >= parseInt(num.value); i--) {
       courses[i].style.display = "none";
     }
