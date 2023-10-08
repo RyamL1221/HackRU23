@@ -12,7 +12,6 @@ import HackRU23Back.model.Student;
 @Repository
 public interface StudentRepo extends MongoRepository<Student, Long> {
 
-    @Query("{id:'?0'")
     Optional<Student> findStudentById(Long id);
 
     void deleteStudentById(Long id);

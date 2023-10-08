@@ -23,7 +23,6 @@ public class StudentService {
     }
 
     public Student addStudent(Student student) {
-        student.setCode(UUID.randomUUID().toString());
         return studentRepo.save(student);
     }
 
