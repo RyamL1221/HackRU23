@@ -1,9 +1,11 @@
+import { Course } from "./course";
+
 export interface Student {
-    
+
     name: String;
     classYear: String;
     gradYear: number;
-    courseList: String[];
+    courseList: Course[];
     gpa: number;
     
 }
