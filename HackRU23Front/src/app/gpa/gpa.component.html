@@ -21,7 +21,7 @@
     </div>
 </nav>
 <!--Dropdown-->
-<label class="m-4" for="membership">Choose your number of classes:</label>
+<label class="m-3" for="membership">Choose your number of classes:</label>
 <select name="membership" id="membership">
     <option value="1">1</option>
     <option value="2">2</option>
@@ -33,125 +33,145 @@
     <option value="8">8</option>
 </select>
 <!--Update-->
-<button class="update" onClick={Print}>Update <span class=reload>&#x21bb;</span></button>
+<button class="update" id="updatebtn" (click)="update()">Update <span class=reload>&#x21bb;</span></button>
 <!--Courses-->
 <div class="container-fluid">
     <div class="row">
         <!--Course 1-->
-        <div class="col-xl-3 col-sm-6" id="course1">
+        <div class="col-xl-3 col-sm-6" id="1">
             <div class="card" style="width: 18rem;">
                 <div class="card-header bg-danger">
                     Class 1
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Course Name:<input type="text" class="mt-2"></li>
-                    <li class="list-group-item">Course Number:<input type="text" class="mt-2"></li>
-                    <li class="list-group-item">Grade Received:<input type="text" class="mt-2"></li>
-                    <li class="list-group-item">Credits Received:<input type="text" class="mt-2"></li>
+                    <li class="list-group-item">Course Name:<input type="text" class="mt-2"
+                            placeholder="Data Structures"></li>
+                    <li class="list-group-item">Course Number:<input type="text" class="mt-2" placeholder="01:198:112">
+                    </li>
+                    <li class="list-group-item">Grade Received:<input type="text" class="mt-2" placeholder="B"></li>
+                    <li class="list-group-item">Credits Received:<input type="text" class="mt-2" placeholder="3"></li>
                 </ul>
             </div>
         </div>
         <!--Course 2-->
-        <div class="col-xl-3 col-sm-6" id="course2">
+        <div class="col-xl-3 col-sm-6" id="2">
             <div class="card" style="width: 18rem;">
                 <div class="card-header bg-danger">
                     Class 2
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Course Name:<input type="text" class="mt-2"></li>
-                    <li class="list-group-item">Course Number:<input type="text" class="mt-2"></li>
-                    <li class="list-group-item">Grade Received:<input type="text" class="mt-2"></li>
-                    <li class="list-group-item">Credits Received:<input type="text" class="mt-2"></li>
+                    <li class="list-group-item">Course Name:<input type="text" class="mt-2"
+                            placeholder="Data Structures"></li>
+                    <li class="list-group-item">Course Number:<input type="text" class="mt-2" placeholder="01:198:112">
+                    </li>
+                    <li class="list-group-item">Grade Received:<input type="text" class="mt-2" placeholder="B"></li>
+                    <li class="list-group-item">Credits Received:<input type="text" class="mt-2" placeholder="3"></li>
                 </ul>
             </div>
         </div>
         <!--Course 3-->
-        <div class="col-xl-3 col-sm-6" id="course3">
+        <div class="col-xl-3 col-sm-6" id="3">
             <div class="card" style="width: 18rem;">
                 <div class="card-header bg-danger">
                     Class 3
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Course Name:<input type="text" class="mt-2"></li>
-                    <li class="list-group-item">Course Number:<input type="text" class="mt-2"></li>
-                    <li class="list-group-item">Grade Received:<input type="text" class="mt-2"></li>
-                    <li class="list-group-item">Credits Received:<input type="text" class="mt-2"></li>
+                    <li class="list-group-item">Course Name:<input type="text" class="mt-2"
+                            placeholder="Data Structures"></li>
+                    <li class="list-group-item">Course Number:<input type="text" class="mt-2" placeholder="01:198:112">
+                    </li>
+                    <li class="list-group-item">Grade Received:<input type="text" class="mt-2" placeholder="B"></li>
+                    <li class="list-group-item">Credits Received:<input type="text" class="mt-2" placeholder="3"></li>
                 </ul>
             </div>
         </div>
         <!--Course 4-->
-        <div class="col-xl-3 col-sm-6" id="course4">
+        <div class="col-xl-3 col-sm-6" id="4">
             <div class="card" style="width: 18rem;">
                 <div class="card-header bg-danger">
                     Class 4
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Course Name:<input type="text" class="mt-2"></li>
-                    <li class="list-group-item">Course Number:<input type="text" class="mt-2"></li>
-                    <li class="list-group-item">Grade Received:<input type="text" class="mt-2"></li>
-                    <li class="list-group-item">Credits Received:<input type="text" class="mt-2"></li>
+                    <li class="list-group-item">Course Name:<input type="text" class="mt-2"
+                            placeholder="Data Structures"></li>
+                    <li class="list-group-item">Course Number:<input type="text" class="mt-2" placeholder="01:198:112">
+                    </li>
+                    <li class="list-group-item">Grade Received:<input type="text" class="mt-2" placeholder="B"></li>
+                    <li class="list-group-item">Credits Received:<input type="text" class="mt-2" placeholder="3"></li>
                 </ul>
             </div>
         </div>
     </div>
     <div class="row my-4">
         <!--Course 5-->
-        <div class="col-xl-3 col-sm-6" id="course5">
+        <div class="col-xl-3 col-sm-6" id="5">
             <div class="card" style="width: 18rem;">
                 <div class="card-header bg-danger">
                     Class 5
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Course Name:<input type="text" class="mt-2"></li>
-                    <li class="list-group-item">Course Number:<input type="text" class="mt-2"></li>
-                    <li class="list-group-item">Grade Received:<input type="text" class="mt-2"></li>
-                    <li class="list-group-item">Credits Received:<input type="text" class="mt-2"></li>
+                    <li class="list-group-item">Course Name:<input type="text" class="mt-2"
+                            placeholder="Data Structures"></li>
+                    <li class="list-group-item">Course Number:<input type="text" class="mt-2" placeholder="01:198:112">
+                    </li>
+                    <li class="list-group-item">Grade Received:<input type="text" class="mt-2" placeholder="B"></li>
+                    <li class="list-group-item">Credits Received:<input type="text" class="mt-2" placeholder="3"></li>
                 </ul>
             </div>
         </div>
         <!--Course 6-->
-        <div class="col-xl-3 col-sm-6" id="course6">
+        <div class="col-xl-3 col-sm-6" id="6">
             <div class="card" style="width: 18rem;">
                 <div class="card-header bg-danger">
                     Class 6
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Course Name:<input type="text" class="mt-2"></li>
-                    <li class="list-group-item">Course Number:<input type="text" class="mt-2"></li>
-                    <li class="list-group-item">Grade Received:<input type="text" class="mt-2"></li>
-                    <li class="list-group-item">Credits Received:<input type="text" class="mt-2"></li>
+                    <li class="list-group-item">Course Name:<input type="text" class="mt-2"
+                            placeholder="Data Structures"></li>
+                    <li class="list-group-item">Course Number:<input type="text" class="mt-2" placeholder="01:198:112">
+                    </li>
+                    <li class="list-group-item">Grade Received:<input type="text" class="mt-2" placeholder="B"></li>
+                    <li class="list-group-item">Credits Received:<input type="text" class="mt-2" placeholder="3"></li>
                 </ul>
             </div>
         </div>
         <!--Course 7-->
-        <div class="col-xl-3 col-sm-6" id="course7">
+        <div class="col-xl-3 col-sm-6" id="7">
             <div class="card" style="width: 18rem;">
                 <div class="card-header bg-danger">
                     Class 7
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Course Name:<input type="text" class="mt-2"></li>
-                    <li class="list-group-item">Course Number:<input type="text" class="mt-2"></li>
-                    <li class="list-group-item">Grade Received:<input type="text" class="mt-2"></li>
-                    <li class="list-group-item">Credits Received:<input type="text" class="mt-2"></li>
+                    <li class="list-group-item">Course Name:<input type="text" class="mt-2"
+                            placeholder="Data Structures"></li>
+                    <li class="list-group-item">Course Number:<input type="text" class="mt-2" placeholder="01:198:112">
+                    </li>
+                    <li class="list-group-item">Grade Received:<input type="text" class="mt-2" placeholder="B"></li>
+                    <li class="list-group-item">Credits Received:<input type="text" class="mt-2" placeholder="3"></li>
                 </ul>
             </div>
         </div>
         <!--Course 8-->
-        <div class="col-xl-3 col-sm-6" id="course8">
+        <div class="col-xl-3 col-sm-6" id="8">
             <div class="card" style="width: 18rem;">
                 <div class="card-header bg-danger">
                     Class 8
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Course Name:<input type="text" class="mt-2"></li>
-                    <li class="list-group-item">Course Number:<input type="text" class="mt-2"></li>
-                    <li class="list-group-item">Grade Received:<input type="text" class="mt-2"></li>
-                    <li class="list-group-item">Credits Received:<input type="text" class="mt-2"></li>
+                    <li class="list-group-item">Course Name:<input type="text" class="mt-2"
+                            placeholder="Data Structures"></li>
+                    <li class="list-group-item">Course Number:<input type="text" class="mt-2" placeholder="01:198:112">
+                    </li>
+                    <li class="list-group-item">Grade Received:<input type="text" class="mt-2" placeholder="B"></li>
+                    <li class="list-group-item">Credits Received:<input type="text" class="mt-2" placeholder="3"></li>
                 </ul>
             </div>
         </div>
     </div>
+</div>
+<div class="container text-center">
+    <button class="ripple calculate my-2">Calculate GPA</button>
+    <p class="gpa">GPA: X</p>
 </div>
 <!--Footer-->
 <div class="container">
