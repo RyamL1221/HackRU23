@@ -1,5 +1,5 @@
 import { NgForm } from '@angular/forms';
-import { Component, OnInit } from '@angular/core';
+import { assertPlatform, Component, OnInit } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
 import { StudentService } from './student.service';
 import { Student } from './student';
@@ -15,8 +15,11 @@ import { Course } from './course';
 export class GpaComponent {
 
   public students: Student[] = [];
-  public classNum = 8;
   public addStudent: Student = {name:"-1", classYear:"-1", gradYear: -1, courseList: [], gpa: 0}
+  public numCourses = 0;
+  public addCourse: Course = {name: "course", number:"01", grade: "?", credits: -1, value: 4}
+  public courses: Course[] = [];
+  public numArray: number[] = [];
 
   constructor(private studentService: StudentService) {}
 
@@ -35,29 +38,32 @@ export class GpaComponent {
     )
   };
 
-  public counter(i: number) {
-    return new Array(i);
-}
-
-  onSelected(value: number): void {
-    this.classNum = Number('value');
+  public loopNumArray(n: number): number[] {
+    for(let i = 0; i < n; i++) {
+      this.numArray.push(i);
+    }
+    return this.numArray;
   }
 
-  onAddStudent(addForm: NgForm): void {
-    document.getElementById('add-student-form')?.click();
-    this.studentService.addStudent(addForm.value).subscribe(
+  onSubmit(addForm: NgForm): void {
+    console.log(JSON.stringify(this.addStudent));
+    this.studentService.addStudent(this.addStudent).subscribe(
       (response: Student) => {
+        console.log(response);
         this.getStudents();
-        addForm.reset;
-      },
+        addForm.reset();
+      },  
       (error: HttpErrorResponse) => {
         alert(error.message);
+        addForm.reset();
       }
     )
   }
-  public num1 = 0;
+
+
   public update(): void{
     const num = document.getElementById("membership") as HTMLSelectElement
+    this.numCourses = Number('num');
     const courses = []
     courses[0] = document.getElementById("1") as HTMLDivElement
     courses[1] = document.getElementById("2") as HTMLDivElement
