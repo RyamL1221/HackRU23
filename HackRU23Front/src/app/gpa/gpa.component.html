@@ -27,15 +27,17 @@
     <div class="row px-5">
         <div class="form col-lg-6 col-md-8 p-4">
             <div class="form-heading"><h3>Enter your information</h3></div>
-            <p class="mb-2">Name:</p>
-            <input type="text">
-            <hr>
-            <p class="mb-2">Year:</p>
-            <input type="text">
-            <hr>
-            <p class="mb-2">Graduation year:</p>
-            <input type="text">
-            <hr>
+            <form #addForm="ngForm" (ngSubmit)="onAddStudent(addForm)">
+                <p class="mb-2">Name:</p>
+                <input type="text" ngModel name="name" id="name" required>
+                <hr>
+                <p class="mb-2">Year:</p>
+                <input type="text" ngModel name="classYear" id="classYear" required>
+                <hr>
+                <p class="mb-2">Graduation year:</p>
+                <input type="text" ngModel name="gradYear" id="gradYear" required>
+                <hr>
+            </form>
             <!--Dropdown-->
             <label class="m-2" for="membership">Choose your number of classes:</label>
             <select name="membership" id="membership">
@@ -188,7 +190,7 @@
     </div>
 </div>
 <div class="container text-center">
-    <button class="ripple calculate my-2">Calculate GPA</button>
+    <button type="submit" class="ripple calculate my-2">Calculate GPA</button>
     <p class="gpa">GPA: X</p>
 </div>
 <!--Footer-->
@@ -216,42 +218,3 @@
         </ul>
     </footer>
 </div>
-
-<!-- Add Student Modal -->
-
-<div class="modal fade" id="addStudentModal" tabindex="-1" role="dialog" aria-labelledby="addStudentModal" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="addStudentModal">Add Student</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <form #addForm="ngForm" (ngSubmit)="onAddStudent(addForm)">
-                <div class="modal-body">     
-                    <div>
-                        <label for="name">Name</label>
-                        <input type="text" ngModel name="name" class="form-control" id="name" placeholder="Name" required>
-                    </div>
-                    <br>
-                    <div>
-                        <label for="classYear">Class Year</label>
-                        <input type="text" ngModel name="classYear" class="form-control" id="classYear" placeholder="Grade Level" required>
-                    </div>
-                    <br>
-                    <div>
-                        <label for="gradYear">Graduation Year</label>
-                        <input type="gradYear" ngModel name="gradYear" class="form-control" id="gradYear" placeholder="Points" required>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" id="add-student-form" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button [disabled]="addForm.invalid" type="submit" class="btn btn-primary">Save</button>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-
--->

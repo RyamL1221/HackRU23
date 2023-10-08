@@ -16,6 +16,7 @@ export class GpaComponent {
 
   public students: Student[] = [];
   public classNum = 8;
+  public addStudent: Student = {name:"-1", classYear:"-1", gradYear: -1, courseList: [], gpa: 0}
 
   constructor(private studentService: StudentService) {}
 
@@ -38,8 +39,7 @@ export class GpaComponent {
     return new Array(i);
 }
 
-  onSelected(value: string): void {
-    console.log("it works");
+  onSelected(value: number): void {
     this.classNum = Number('value');
   }
 
