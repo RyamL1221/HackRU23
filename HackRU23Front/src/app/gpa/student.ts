@@ -1,6 +1,9 @@
 export interface Student {
-    id: number;
-    code: String;
+    
     name: String;
-    gpa: String;
+    classYear: String;
+    gradYear: number;
+    courseList: String[];
+    gpa: number;
+    
 }
