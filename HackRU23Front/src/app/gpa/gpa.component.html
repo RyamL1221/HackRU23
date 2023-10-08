@@ -17,28 +17,46 @@
             <li class="nav-item">
                 <a class="nav-link" routerLink="/">Schedule</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/gpa-history">GPA History</a>
+            </li>
         </ul>
     </div>
 </nav>
-<!--Dropdown-->
-<label class="m-3" for="membership">Choose your number of classes:</label>
-<select name="membership" id="membership">
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="4">4</option>
-    <option value="5">5</option>
-    <option value="6">6</option>
-    <option value="7">7</option>
-    <option value="8">8</option>
-</select>
-<!--Update-->
-<button class="update" id="updatebtn" (click)="update()">Update <span class=reload>&#x21bb;</span></button>
-<!--Courses-->
 <div class="container-fluid">
+    <div class="row px-5">
+        <div class="form col-lg-6 col-md-8 p-4">
+            <div class="form-heading"><h3>Enter your information</h3></div>
+            <p class="mb-2">Name:</p>
+            <input type="text">
+            <hr>
+            <p class="mb-2">Year:</p>
+            <input type="text">
+            <hr>
+            <p class="mb-2">Graduation year:</p>
+            <input type="text">
+            <hr>
+            <!--Dropdown-->
+            <label class="m-2" for="membership">Choose your number of classes:</label>
+            <select name="membership" id="membership">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+            </select>
+            <!--Update-->
+            <button class="update" id="updatebtn" (click)="update()">Update <span class=reload>&#x21bb;</span></button>
+        </div>
+    </div>
+
+    <!--Courses-->
     <div class="row">
         <!--Course 1-->
-        <div class="col-xl-3 col-sm-6" id="1">
+        <div class="col-xl-3 col-sm-6 my-2" id="1">
             <div class="card" style="width: 18rem;">
                 <div class="card-header bg-danger">
                     Class 1
@@ -54,7 +72,7 @@
             </div>
         </div>
         <!--Course 2-->
-        <div class="col-xl-3 col-sm-6" id="2">
+        <div class="col-xl-3 col-sm-6 my-2" id="2">
             <div class="card" style="width: 18rem;">
                 <div class="card-header bg-danger">
                     Class 2
@@ -70,7 +88,7 @@
             </div>
         </div>
         <!--Course 3-->
-        <div class="col-xl-3 col-sm-6" id="3">
+        <div class="col-xl-3 col-sm-6 my-2" id="3">
             <div class="card" style="width: 18rem;">
                 <div class="card-header bg-danger">
                     Class 3
@@ -86,7 +104,7 @@
             </div>
         </div>
         <!--Course 4-->
-        <div class="col-xl-3 col-sm-6" id="4">
+        <div class="col-xl-3 col-sm-6 my-2" id="4">
             <div class="card" style="width: 18rem;">
                 <div class="card-header bg-danger">
                     Class 4
@@ -102,9 +120,9 @@
             </div>
         </div>
     </div>
-    <div class="row my-4">
+    <div class="row mb-4">
         <!--Course 5-->
-        <div class="col-xl-3 col-sm-6" id="5">
+        <div class="col-xl-3 col-sm-6 my-2" id="5">
             <div class="card" style="width: 18rem;">
                 <div class="card-header bg-danger">
                     Class 5
@@ -120,7 +138,7 @@
             </div>
         </div>
         <!--Course 6-->
-        <div class="col-xl-3 col-sm-6" id="6">
+        <div class="col-xl-3 col-sm-6 my-2" id="6">
             <div class="card" style="width: 18rem;">
                 <div class="card-header bg-danger">
                     Class 6
@@ -136,7 +154,7 @@
             </div>
         </div>
         <!--Course 7-->
-        <div class="col-xl-3 col-sm-6" id="7">
+        <div class="col-xl-3 col-sm-6 my-2" id="7">
             <div class="card" style="width: 18rem;">
                 <div class="card-header bg-danger">
                     Class 7
@@ -152,7 +170,7 @@
             </div>
         </div>
         <!--Course 8-->
-        <div class="col-xl-3 col-sm-6" id="8">
+        <div class="col-xl-3 col-sm-6 my-2" id="8">
             <div class="card" style="width: 18rem;">
                 <div class="card-header bg-danger">
                     Class 8
