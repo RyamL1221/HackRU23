@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home';
 import { GpaComponent } from './gpa';
+import { GpaHistoryComponent } from './gpa-history/gpa-history.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    GpaComponent
+    GpaComponent,
+    GpaHistoryComponent
   ],
   imports: [
     BrowserModule,
