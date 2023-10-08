@@ -23,7 +23,6 @@ public class StudentService {
     }
 
     public Student addStudent(Student student) {
-        student.setCode(UUID.randomUUID().toString());
         return studentRepo.save(student);
     }
 
@@ -36,7 +35,7 @@ public class StudentService {
     }
 
     public Student findStudentById(Long id) {
-        return studentRepo.findStudentbyId(id)
+        return studentRepo.findStudentById(id)
             .orElseThrow(() -> new StudentNotFoundException("Student with id " + id + " was not fonud."));
     }
 
