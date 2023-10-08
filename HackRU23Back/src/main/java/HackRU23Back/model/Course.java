@@ -19,13 +19,28 @@ public class Course	{
 	public Course(String name, String number, String grade, int credits) {
 		this.name = name;
 		this.number = number;
-		this.grade = grade.toUpperCase();
+		this.grade = grade;
 		this.credits = credits;
 		this.value = convertGradeToValue();
 	}
 
 	public double convertGradeToValue() {
-		switch (grade) {
+		String testGrade = grade;
+		switch (testGrade.substring(0, 1)) {
+			case "K":
+				testGrade = testGrade.substring(1);
+				break;
+			case "E":
+			case "J":
+			case "P":
+				credits = 0;
+				break;
+		}
+		if (testGrade.substring(0, 2).equals("NC")) {
+			credits = 0;
+		}
+
+		switch (testGrade) {
 			case "A":
 				return 4.0;
 			case "B+":
