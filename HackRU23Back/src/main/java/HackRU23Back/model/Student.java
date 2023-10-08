@@ -22,12 +22,19 @@ import lombok.Setter;
 public class Student implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private String id;
 	private int numClasses;
     private String name;
     private String classYear; // i.e. "Freshman, Sophomore, etc."
     private int gradYear; // i.e. "2027, 2026, etc."
     private String courseList;
 	private double gpa;
-	private String code;
+
+	public Student(int numClasses, String name, String classYear, int gradYear, String courseList) {
+		this.numClasses = numClasses;
+		this.name = name;
+		this.classYear = classYear;
+		this.gradYear = gradYear;
+		this.courseList = courseList;
+	}
 }
