@@ -14,7 +14,7 @@
 	<name>HackRU23Back</name>
 	<description>Backend for HackRU23 using Springboot and Mongo</description>
 	<properties>
-		<java.version>20</java.version>
+		<java.version>21</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
